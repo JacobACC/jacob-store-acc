@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jacob Store - Sklep z kontami do gier</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Nawigacja -->
+    <nav>
+        <ul>
+            <li><a href="#home">Strona Główna</a></li>
+            <li><a href="#products">Produkty</a></li>
+            <li><a href="#cart" id="cartBtn">Koszyk</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+            <li><a href="#legitcheck">Legit Check</a></li>
+            <li><a href="#reviews">Opinie</a></li>
+        </ul>
+    </nav>
+
+    <!-- Strona główna -->
+    <section id="home">
+        <h1>Witaj w Jacob Store</h1>
+        <div class="featured-products">
+            <div onclick="selectProduct(1)">Konto 1</div>
+            <div onclick="selectProduct(2)">Konto 2</div>
+            <div onclick="selectProduct(3)">Konto 3</div>
+        </div>
+    </section>
+
+    <!-- Produkty -->
+    <section id="products">
+        <h2>Nasze Konta</h2>
+        <div id="product-list"></div>
+    </section>
+
+    <!-- Koszyk -->
+    <div id="cart-sidebar">
+        <h2>Koszyk</h2>
+        <div id="cart-items"></div>
+        <p id="empty-cart">Koszyk jest pusty</p>
+        <button onclick="proceedToCheckout()">Kup teraz</button>
+        <button onclick="closeCart()">Zamknij koszyk</button>
+    </div>
+
+    <!-- Kontakt -->
+    <section id="contact">
+        <h2>Kontakt</h2>
+        <p>Telefon: 123-456-789</p>
+        <p>Email: kontakt@jacobstore.pl</p>
+        <p>Adres: ul. Gry 12, 00-000 Warszawa</p>
+    </section>
+
+    <!-- Legit Check -->
+    <section id="legitcheck">
+        <h2>Legit Check</h2>
+        <div id="legit-list"></div>
+        <textarea id="new-legit" placeholder="Dodaj swój legit check"></textarea>
+        <button onclick="addLegit()">Dodaj Legit Check</button>
+    </section>
+
+    <!-- Opinie -->
+    <section id="reviews">
+        <h2>Opinie</h2>
+        <div id="review-list"></div>
+        <textarea id="new-review" placeholder="Dodaj swoją opinię"></textarea>
+        <button onclick="addReview()">Dodaj opinię</button>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
